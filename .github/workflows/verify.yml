@@ -32,7 +32,7 @@ jobs:
         run: |
           set -euo pipefail
           found=0
-          for verifier in skills/*/evals/verify.mjs; do
+          for verifier in skills/*/evals/verify.mjs; do # WAP-VER-005
             [[ -f "$verifier" ]] || continue
             found=1
             node "$verifier"

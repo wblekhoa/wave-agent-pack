@@ -14,7 +14,7 @@ const manifest = JSON.parse(read("skill-package.json"));
 const triggerCases = JSON.parse(read(manifest.verification.trigger_cases));
 const reportCases = JSON.parse(read(manifest.verification.report_cases));
 
-assert.match(skill, /^---\nname: audit-codex-storage\n/);
+assert.match(skill, /^---\nname: audit-codex-storage\n/); // WAP-VER-001
 for (const heading of ["Workflow", "Hard Gates", "Required Report", "Verification"]) {
   assert.match(skill, new RegExp(`## ${heading}`));
 }
@@ -42,13 +42,13 @@ for (const contract of [
   assert.match(decisionModel, contract);
 }
 
-assert.equal(manifest.name, "audit-codex-storage");
-assert.equal(manifest.version, "0.1.0");
+assert.equal(manifest.name, "audit-codex-storage"); // WAP-VER-001
+assert.equal(manifest.version, "0.1.1");
 assert.equal(manifest.publication.decision, "PUBLIC");
 assert.equal(manifest.compatibility.format, "agentskills.io");
-assert.deepEqual(Object.keys(manifest.compatibility.adapters).sort(), ["claude-code", "codex", "gemini-cli", "hermes", "openclaw"]);
+assert.deepEqual(Object.keys(manifest.compatibility.adapters).sort(), ["claude-code", "codex", "gemini-cli", "hermes", "openclaw"]); // WAP-INST-001
 
-assert.equal(triggerCases.length, 20);
+assert.equal(triggerCases.length, 20); // WAP-VER-002
 assert.equal(triggerCases.filter((entry) => entry.expected === "USE").length, 10);
 assert.equal(triggerCases.filter((entry) => entry.expected === "DO_NOT_USE").length, 10);
 assert.equal(new Set(triggerCases.map((entry) => entry.id)).size, triggerCases.length);
@@ -63,7 +63,7 @@ const requiredReportCategories = [
   "privacy-boundary",
   "strict-exit",
 ];
-assert.equal(reportCases.length, requiredReportCategories.length);
+assert.equal(reportCases.length, requiredReportCategories.length); // WAP-VER-003
 assert.deepEqual([...new Set(reportCases.map((entry) => entry.category))].sort(), requiredReportCategories.sort());
 assert.equal(new Set(reportCases.map((entry) => entry.id)).size, reportCases.length);
 for (const entry of reportCases) {
@@ -75,7 +75,7 @@ for (const entry of reportCases) {
 }
 
 const publicText = [skill, readme, helper, decisionModel].join("\n");
-for (const marker of manifest.publication.private_markers) {
+for (const marker of manifest.publication.private_markers) { // WAP-VER-004
   assert.equal(publicText.includes(marker), false, `portable package contains private marker: ${marker}`);
 }
 for (const mutationPattern of [
@@ -85,7 +85,7 @@ for (const mutationPattern of [
   /\bPath\([^\n]*\)\.unlink\s*\(/,
   /\bos\.rename\s*\(/,
 ]) {
-  assert.doesNotMatch(helper, mutationPattern);
+  assert.doesNotMatch(helper, mutationPattern); // WAP-VER-006
 }
 assert.match(helper, /"reclaimable_bytes": 0/);
 assert.match(helper, /"executed": False/);
@@ -96,7 +96,7 @@ const tests = spawnSync(
   ["-m", "unittest", "discover", "-s", "tests", "-p", "test_*.py", "-v"],
   { cwd: root, encoding: "utf8" },
 );
-assert.equal(tests.status, 0, tests.stderr || tests.stdout);
+assert.equal(tests.status, 0, tests.stderr || tests.stdout); // WAP-VER-007
 
 const help = spawnSync(python, ["scripts/audit_codex_storage.py", "--help"], {
   cwd: root,

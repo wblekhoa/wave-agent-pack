@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "name": "deep-research",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "owner": {
     "kind": "public-repository",
-    "id": "wblekhoa/dol-agent-skills"
+    "id": "wblekhoa/wave-agent-pack"
   },
   "provenance": {
     "kind": "derived",
-    "statement": "DOL-authored portable workflow informed by internal operating experience and the MIT-licensed references listed below; no source text or code is copied.",
+    "statement": "Portable workflow authored for this collection, informed by internal operating experience and the MIT-licensed references listed below; no source text or code is copied.",
     "sources": [
       {
         "url": "https://github.com/daymade/claude-code-skills/tree/main/deep-research",
@@ -25,7 +25,7 @@
   "publication": {
     "intent": "PUBLIC",
     "decision": "PUBLIC",
-    "canonical_repository": "https://github.com/wblekhoa/dol-agent-skills",
+    "canonical_repository": "https://github.com/wblekhoa/wave-agent-pack",
     "canonical_path": "skills/deep-research",
     "holds": [],
     "private_markers": [
@@ -61,7 +61,7 @@
     }
   },
   "verification": {
-    "last_verified": "2026-08-12",
+    "last_verified": "2026-10-11",
     "receipt": "verification-receipt.json",
     "trigger_cases": "evals/trigger-cases.json",
     "report_cases": "evals/report-quality-cases.json",

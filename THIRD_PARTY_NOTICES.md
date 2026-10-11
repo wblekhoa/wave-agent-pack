@@ -1,6 +1,6 @@
 # Third-Party Notices
 
-Deep Research is a DOL-authored portable workflow. Its design was informed by the following
+Deep Research is a portable workflow authored for this collection. Its design was informed by the following
 MIT-licensed public projects; no source text or code is copied into this package.
 
 ## daymade/claude-code-skills

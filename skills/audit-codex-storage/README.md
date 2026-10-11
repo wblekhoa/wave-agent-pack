@@ -19,13 +19,13 @@ Clone the public collection, then copy this complete package so its helper and d
 remain available:
 
 ```sh
-git clone https://github.com/wblekhoa/dol-agent-skills.git
+git clone https://github.com/wblekhoa/wave-agent-pack.git
 
 # Codex, Gemini CLI/Antigravity, or a configured OpenClaw/Hermes workspace
-cp -R dol-agent-skills/skills/audit-codex-storage .agents/skills/audit-codex-storage
+cp -R wave-agent-pack/skills/audit-codex-storage .agents/skills/audit-codex-storage
 
 # Claude Code
-cp -R dol-agent-skills/skills/audit-codex-storage .claude/skills/audit-codex-storage
+cp -R wave-agent-pack/skills/audit-codex-storage .claude/skills/audit-codex-storage
 ```
 
 Do not install over an existing skill with the same name unless its owner and rollback path are

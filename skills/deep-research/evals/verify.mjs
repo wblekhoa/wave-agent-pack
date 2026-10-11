@@ -9,7 +9,7 @@ const manifest = JSON.parse(fs.readFileSync(path.join(root, "skill-package.json"
 const triggerCases = JSON.parse(fs.readFileSync(path.join(root, manifest.verification.trigger_cases), "utf8"));
 const reportCases = JSON.parse(fs.readFileSync(path.join(root, manifest.verification.report_cases), "utf8"));
 
-assert.match(skill, /^---\nname: deep-research\n/);
+assert.match(skill, /^---\nname: deep-research\n/); // WAP-VER-001
 for (const heading of ["Ground the host project", "Lock the decision", "Build a source plan", "Counter-review and verify", "Output contract"]) {
   assert.match(skill, new RegExp(`##[^\\n]*${heading}|###[^\\n]*${heading}`));
 }
@@ -23,11 +23,11 @@ for (const contract of [
 ]) {
   assert.match(skill, contract);
 }
-assert.equal(manifest.name, "deep-research");
-assert.equal(manifest.version, "0.2.0");
+assert.equal(manifest.name, "deep-research"); // WAP-VER-001
+assert.equal(manifest.version, "0.2.1");
 assert.equal(manifest.compatibility.format, "agentskills.io");
-assert.deepEqual(Object.keys(manifest.compatibility.adapters).sort(), ["claude-code", "codex", "gemini-cli", "hermes", "openclaw"]);
-assert.equal(triggerCases.length, 20);
+assert.deepEqual(Object.keys(manifest.compatibility.adapters).sort(), ["claude-code", "codex", "gemini-cli", "hermes", "openclaw"]); // WAP-INST-001
+assert.equal(triggerCases.length, 20); // WAP-VER-002
 assert.equal(triggerCases.filter((entry) => entry.expected === "USE").length, 10);
 assert.equal(triggerCases.filter((entry) => entry.expected === "DO_NOT_USE").length, 10);
 assert.equal(new Set(triggerCases.map((entry) => entry.id)).size, triggerCases.length);
@@ -42,7 +42,7 @@ const requiredReportCategories = [
   "temporal-conflict",
   "untrusted-source-instruction",
 ];
-assert.equal(reportCases.length, requiredReportCategories.length);
+assert.equal(reportCases.length, requiredReportCategories.length); // WAP-VER-003
 assert.deepEqual([...new Set(reportCases.map((entry) => entry.category))].sort(), requiredReportCategories.sort());
 assert.equal(new Set(reportCases.map((entry) => entry.id)).size, reportCases.length);
 for (const entry of reportCases) {
@@ -54,7 +54,7 @@ for (const entry of reportCases) {
   assert.ok(Array.isArray(entry.forbidden_behaviors) && entry.forbidden_behaviors.length >= 2);
 }
 
-for (const marker of manifest.publication.private_markers) {
+for (const marker of manifest.publication.private_markers) { // WAP-VER-004
   assert.equal(skill.includes(marker), false, `portable SKILL.md contains private marker: ${marker}`);
 }
 

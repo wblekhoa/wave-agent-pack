@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "name": "audit-codex-storage",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "owner": {
     "kind": "public-repository",
-    "id": "wblekhoa/dol-agent-skills"
+    "id": "wblekhoa/wave-agent-pack"
   },
   "provenance": {
     "kind": "original",
@@ -13,7 +13,7 @@
   "publication": {
     "intent": "PUBLIC",
     "decision": "PUBLIC",
-    "canonical_repository": "https://github.com/wblekhoa/dol-agent-skills",
+    "canonical_repository": "https://github.com/wblekhoa/wave-agent-pack",
     "canonical_path": "skills/audit-codex-storage",
     "holds": [],
     "private_markers": [
@@ -51,7 +51,7 @@
     }
   },
   "verification": {
-    "last_verified": "2026-08-18",
+    "last_verified": "2026-10-11",
     "receipt": "verification-receipt.json",
     "trigger_cases": "evals/trigger-cases.json",
     "report_cases": "evals/report-quality-cases.json",

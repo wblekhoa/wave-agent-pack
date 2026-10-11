@@ -1,6 +1,7 @@
-# DOL Agent Skills
+# WAVE agent pack
 
-Portable, verified AI skills that can be used without adopting the private DOL control plane.
+Portable, verified AI skills from the WAVE family that can be used without adopting any private
+control plane.
 
 This repository is the public incubator for skills that share one trust, licensing, and release
 boundary. A package should move to its own repository only when it gains distinct maintainers,
@@ -10,25 +11,25 @@ security policy, runtime, release cadence, or contribution workflow.
 
 | Skill | Use when | Version |
 |---|---|---|
-| [Deep Research](skills/deep-research/README.md) | A decision needs current multi-source evidence, comparison, and counter-review | 0.2.0 |
-| [Audit Codex Storage](skills/audit-codex-storage/README.md) | Codex storage is unexpectedly large or disk/process-memory pressure needs a safe audit | 0.1.0 |
+| [Deep Research](skills/deep-research/README.md) | A decision needs current multi-source evidence, comparison, and counter-review | 0.2.1 |
+| [Audit Codex Storage](skills/audit-codex-storage/README.md) | Codex storage is unexpectedly large or disk/process-memory pressure needs a safe audit | 0.1.1 |
 
 ## Install
 
 Clone the collection:
 
 ```sh
-git clone https://github.com/wblekhoa/dol-agent-skills.git
+git clone https://github.com/wblekhoa/wave-agent-pack.git
 ```
 
 Then copy only the package you need:
 
 ```sh
 # Codex, Gemini CLI/Antigravity, or a configured OpenClaw/Hermes workspace
-cp -R dol-agent-skills/skills/<skill-name> .agents/skills/<skill-name>
+cp -R wave-agent-pack/skills/<skill-name> .agents/skills/<skill-name>
 
 # Claude Code
-cp -R dol-agent-skills/skills/<skill-name> .claude/skills/<skill-name>
+cp -R wave-agent-pack/skills/<skill-name> .claude/skills/<skill-name>
 ```
 
 Read the package README before installation. Filesystem placement does not prove runtime discovery;
@@ -49,7 +50,7 @@ auto-discovery by every agent runtime.
 
 ## Publication policy
 
-- Public packages contain no private DOL paths, secrets, or host-specific policy.
+- Public packages contain no private paths, secrets, or host-specific policy.
 - Every package declares owner, provenance, license, compatibility, trigger cases, and verification.
 - Runtime copies are projections; the package under `skills/` is canonical.
 - New or changed packages remain unpublished until their package and publication receipts pass.

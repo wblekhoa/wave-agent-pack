@@ -1,10 +1,10 @@
 {
   "schema_version": 3,
   "name": "deep-research",
-  "version": "0.2.0",
-  "evaluated_at": "2026-08-12T08:19:21.532Z",
+  "version": "0.2.1",
+  "evaluated_at": "2026-10-11T09:58:18.713Z",
   "evaluator": "scripts/skill-package.mjs",
-  "source_hash": "981e8d097470fd9c730373ede825ffe1369549a0c75bb6b1faced68b01486456",
+  "source_hash": "4b3c5c94a51b149658f3e970b29eeccda0435e60bae7b392eadaf11ed7c58a2e",
   "package_status": "PASS",
   "publication_status": "PASS",
   "entrypoint": {
@@ -13,7 +13,7 @@
   },
   "test": {
     "path": "evals/verify.mjs",
-    "sha256": "b293695ee51e6b976c8b8fdffad755b333986f6fde51cb7162f9ce9b52837128",
+    "sha256": "aaa134297b2bb69368da78f78b2d04613233506f6ecff0131d006ce73ee4b91d",
     "execution": "isolated-package-copy",
     "status": "PASS",
     "evidence": "deep-research package verify PASS · 20 balanced trigger cases · 8 report-quality cases"
@@ -84,7 +84,7 @@
     {
       "id": "runtime-compatibility",
       "status": "PASS",
-      "message": "all five DOL lanes declare explicit discovery adapters"
+      "message": "all five DS lanes declare explicit discovery adapters"
     },
     {
       "id": "consumer-guide",

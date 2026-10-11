@@ -1,10 +1,10 @@
 {
   "schema_version": 3,
   "name": "audit-codex-storage",
-  "version": "0.1.0",
-  "evaluated_at": "2026-08-18T14:52:42.703Z",
+  "version": "0.1.1",
+  "evaluated_at": "2026-10-11T09:58:18.819Z",
   "evaluator": "scripts/skill-package.mjs",
-  "source_hash": "e57c53e9b1ab238c2c32d85ca0e5a26bb6abdd6a4c66225ab5c8a05b253a0b69",
+  "source_hash": "152aee8e0f956ed9589e6262e6b4dfec55383f967060724a83c385dd85be69e1",
   "package_status": "PASS",
   "publication_status": "PASS",
   "entrypoint": {
@@ -13,7 +13,7 @@
   },
   "test": {
     "path": "evals/verify.mjs",
-    "sha256": "018db713173a27f0f5a04c71133af42dbe4119909b17a2cf5b9afe1f1c69293c",
+    "sha256": "fa56a688c63f959538980f360f51fb030bf610fd32e71809f4bf2df6fb8cb775",
     "execution": "isolated-package-copy",
     "status": "PASS",
     "evidence": "audit-codex-storage package verify PASS · read-only helper · 20 balanced trigger cases · 8 safety cases"
@@ -84,7 +84,7 @@
     {
       "id": "runtime-compatibility",
       "status": "PASS",
-      "message": "all five DOL lanes declare explicit discovery adapters"
+      "message": "all five DS lanes declare explicit discovery adapters"
     },
     {
       "id": "consumer-guide",
