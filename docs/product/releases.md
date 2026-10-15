@@ -5,6 +5,8 @@ product: wave-agent-pack
 title: "WAVE agent pack — Releases"
 status: active
 updated: 2026-10-11
+summary: "No GitHub releases or tags exist; packages are versioned in their own skill-package.json on main, with the deep-research and audit-codex-storage version history listed."
+tags: [area/release]
 relations:
   presentedBy: []
 ---

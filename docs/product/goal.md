@@ -5,6 +5,8 @@ product: wave-agent-pack
 title: "WAVE agent pack — Product goal"
 status: active
 updated: 2026-10-11
+summary: "Public, MIT-licensed collection of verified AI-agent skills: copy one folder into any of five runtimes and prove it with one node command; measures verifier passes, trigger balance and brand-free text."
+tags: [area/ai, area/testing, stack/node, surface/cli]
 ---
 # WAVE agent pack — Product goal
 

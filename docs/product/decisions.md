@@ -5,6 +5,8 @@ product: wave-agent-pack
 title: "WAVE agent pack — Decisions"
 status: active
 updated: 2026-10-11
+summary: "Append-only decisions: one public skill collection with split-out rules, CI verification of every package, the read-only Codex storage audit, the rename and debrand to WAVE agent pack, and the product-docs layout."
+tags: [area/ai, area/release, area/docs]
 ---
 # WAVE agent pack — Decisions (append-only, newest first)
 

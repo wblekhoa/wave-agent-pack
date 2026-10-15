@@ -5,6 +5,8 @@ product: wave-agent-pack
 title: "WAVE agent pack — Install and verify (logic)"
 status: active
 updated: 2026-10-11
+summary: "Rules WAP-INST and WAP-VER for what a skill package must declare and prove (five adapters, balanced trigger cases, no private markers, CI runs every verifier), with live versus not-built status and evidence."
+tags: [area/testing, area/ai, stack/node, stack/python, surface/cli]
 reqPrefix: [WAP-INST, WAP-VER]
 relations:
   specifiedBy: [wave-agent-pack-ux-install-verify]

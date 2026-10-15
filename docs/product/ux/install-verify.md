@@ -5,6 +5,8 @@ product: wave-agent-pack
 title: "WAVE agent pack — Install and verify (UX)"
 status: active
 updated: 2026-10-11
+summary: "How a user clones the pack, copies one package folder into their runtime, runs its verifier for a PASS line, checks discovery in a fresh session, and how CI verifies every push."
+tags: [area/testing, area/ai, surface/cli]
 relations:
   specifies: [wave-agent-pack:README.md, wave-agent-pack:skills]
   dependsOn: []
